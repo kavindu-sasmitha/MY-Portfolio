@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Kavindu Sasmitha</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/about.css" />
+</head>
+
+<body>
+  <div class="header-div">
+    <header class="hed">
+      <div class="header">
+        <div class="logo-container">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><button>Download CV</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="main-div">
+    <main>
+      <div id="about">
+        <div class="about-me-container">
+          <div class="image-container" data-aos="fade-right">
+            <img src="/assets/mypic2.png" alt="About image" />
+          </div>
+          <div class="content-container" data-aos="fade-left">
+            <h2>About Me</h2>
+            <p>
+              My name is Kavindu Sasmitha, and I'm 21 years old. I am currently studying to become an IT professional at
+              a Software Engineering Institute.My big dream? Becoming a fullstack developer! Right now, I'm geeking out
+              over web and mobile development, while also fueling my passions for coding.
+            </p>
+            <div class="tabs-container">
+
+              <a href="#" class="tab" onclick="openTab('education')">Education & Certification</a>
+            </div>
+
+            <div class="skills-list active-tab" id="skills">
+              <h3>Bachelor's Degree in Software Engineering</h3>
+              <p>Software Engineering Institute</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function toggleMenu() {
+          const nav = document.querySelector(".nav > ul");
+          const burger = document.querySelector(".burger");
+          nav.classList.toggle("active");
+          burger.classList.toggle("active");
+        }
+      </script>
+</body>
+
+</html>

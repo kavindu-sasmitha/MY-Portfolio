@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Kavindu Sasmitha</title>
+
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Enhanced code background with terminal effect */
+    .code-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      z-index: 0;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      line-height: 1.6;
+      white-space: pre;
+      overflow: hidden;
+      animation: codeScroll 25s linear infinite;
+      text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+
+    @keyframes codeScroll {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+
+
+
+
+
+    .name-container {
+      position: relative;
+      z-index: 20;
+      text-align: center;
+    }
+
+    .name-container img {
+      margin-top: 20px;
+      margin-left: 200px;
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+      from {
+        filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 30px #22d3ee);
+      }
+
+      to {
+        filter: drop-shadow(0 0 25px #fff) drop-shadow(0 0 50px #ec4899);
+      }
+    }
+
+    @keyframes textShift {
+
+      0%,
+      100% {
+        transform: translateX(0) rotateY(0deg);
+      }
+
+      25% {
+        transform: translateX(-8px) rotateY(-4deg);
+      }
+
+      50% {
+        transform: translateX(8px) rotateY(4deg);
+      }
+
+      75% {
+        transform: translateX(-4px) rotateY(-2deg);
+      }
+    }
+
+
+
+
+
+
+
+
+
+    @keyframes cloneFloat {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.2;
+      }
+
+      33% {
+        transform: translate(40px, -25px) scale(1.1);
+        opacity: 0.4;
+      }
+
+      66% {
+        transform: translate(-25px, 40px) scale(0.9);
+        opacity: 0.3;
+      }
+    }
+
+
+
+    /* Typing effect for subtitle with emojis */
+    .subtitle {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.8rem);
+      color: #00ff00;
+      animation: typing 3.5s steps(40, end) infinite, blink-caret 0.7s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #00ff00;
+      padding-right: 8px;
+      font-family: 'Courier New', monospace;
+      text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+
+      50% {
+        width: 100%;
+      }
+
+      100% {
+        width: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-div">
+    <header class="hed">
+      <div class="header">
+        <div class="logo-container">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><button>Download CV</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="main-div">
+    <main>
+      <div class="my-details">
+
+        <h1>
+          <span style="--i: 1">H</span><span style="--i: 2">E</span><span style="--i: 3">L</span><span
+            style="--i: 4">L</span><span style="--i: 5">O</span> <span style="--i: 6"> </span><span
+            style="--i: 7">I</span><span style="--i: 8">'</span><span style="--i: 9">M</span> <span style="--i: 10">
+          </span><span style="--i: 11">K</span><span style="--i: 12">A</span><span style="--i: 13">V</span><span
+            style="--i: 14">I</span><span style="--i: 15">N</span><span style="--i: 16">D</span><span
+            style="--i: 17">U</span> <span style="--i: 18"> </span><span style="--i: 19">S</span><span
+            style="--i: 20">A</span><span style="--i: 21">S</span><span style="--i: 22">M</span><span
+            style="--i: 23">I</span><span style="--i: 24">T</span><span style="--i: 25">H</span><span
+            style="--i: 26">A</span>
+        </h1>
+        <p>
+          <b>Full Stack Developer</b>|Passionate about building modern web &
+          mobile <br />
+          applications. Skilled in React, Node.js, Java and more...
+        </p>
+        <a href="mailto:kavindusasmitha20@gmail.com"><button class="let-connect-button"><b>Let's
+              Connect</b></button></a>
+
+        <!-- Enhanced code background  -->
+        <div class="code-bg">
+          // Welcome to CodeVibe Animation
+          const codeVibe = {
+          name: "CodeVibe",
+          emojis: ["🚀", "🌟", "💻", "🔥", "⚡️", "🎉", "🖱️", "💾", "🖥️", "📟"],
+          animations: {
+          gradient: "12s ease infinite",
+          glow: "2.5s ease-in-out infinite",
+          float: "7s ease-in-out infinite"
+          }
+          };
+
+          function initAnimation() {
+          console.log(`Initializing ${codeVibe.name}...`);
+          codeVibe.emojis.forEach(emoji => {
+          console.log(`Spawning ${emoji} at ${Math.random() * 100}%`);
+          });
+          setInterval(() => {
+          console.log("Running infinite animation loop... 🔄");
+          }, 1000);
+          }
+
+          // Terminal-like output
+          > npm install codevibe-animation
+          > Installing dependencies...
+          > Adding emojis: 🚀🌟💻🔥⚡️🎉🖱️💾🖥️📟
+          > Compiling animations...
+          > Done! Running CodeVibe v1.0.0
+          for (let i = 0; i < 15; i++) { console.log(`Generating clone ${i} for ${codeVibe.name}`); } // Matrix-like
+            effect const matrix=Array(20).fill().map(()=> Math.random().toString(36).slice(2));
+            console.log(matrix.join(" "));
+        </div>
+
+        <div class="name-container">
+          <!-- <h1 class="name">CodeVibe</h1> -->
+          <div class="subtitle">> Code Forever! 🚀💻🌟</div>
+          <img style="width: 1000px;" src="/assets/photos/mypic2.png" alt="">
+        </div>
+      </div>
+
+      <div class="header-div">
+        <header class="hed">
+          <div class="header">
+            <div class="logo-container">
+              <div class="burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <nav class="nav">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><button>Download CV</button></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="projects-container">
+        <h1><i>SOME OF MY LATES WORKS</i></h1>
+        <div class="project-grid">
+          <div class="project-card">
+            <h2>WEB Application</h2>
+            <div class="img-card">
+              <img src="/assets/photo_p/av1.png" alt="AV Academy Screenshot 1">
+              <img src="/assets/photo_p/av1.png" alt="AV Academy Screenshot 2">
+              <img src="/assets/photo_p/av1.png" alt="AV Academy Screenshot 3">
+            </div>
+            <p>
+              AV Academy – A modern educational website built with HTML, CSS, and JavaScript. It features a clean UI,
+              responsive design, and interactive course sections showcasing my front-end development skills.
+            </p>
+            <a href="https://github.com/kavindu-sasmitha/AV-Academy" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-card">
+            <h2>Driving School</h2>
+            <div class="img-card">
+              <img src="/assets/photo_p/av2.png" alt="Elite Driving School Screenshot 1">
+              <img src="/assets/photo_p/av2.png" alt="Elite Driving School Screenshot 2">
+            </div>
+            <p>
+              Elite Driving School – A reliable standalone desktop application built with Java and JavaFX to help users
+              efficiently manage student records, schedules, payments, and training progress in a secure offline
+              environment.
+            </p>
+            <a href="https://github.com/kavindu-sasmitha/Elite-Driving-School-Orm-Project" target="_blank">View on
+              GitHub</a>
+          </div>
+          <div class="project-card">
+            <h2>Responsive Hotel Website</h2>
+            <div class="img-card">
+              <img src="/assets/photo_p/hotel1.png" alt="Hotel Website Screenshot 1">
+              <img src="/assets/photo_p/hotel2.png" alt="Hotel Website Screenshot 2">
+              <img src="/assets/photo_p/hotel3.png" alt="Hotel Website Screenshot 2">
+              <img src="/assets/photo_p/hotel4.png" alt="Hotel Website Screenshot 2">
+            </div>
+            <p>
+              A responsive, front-end web application developed using HTML, CSS, and JavaScript. This project simulates
+              a
+              hotel booking experience, allowing users to browse rooms, check availability, and submit reservation
+              requests.
+              Emphasizes clean UI/UX design and client-side form validation for a seamless user journey.
+            </p>
+            <a href="https://github.com/kavindu-sasmitha/project-three" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div id="about">
+        <div class="about-me-container">
+          <div class="image-container" data-aos="fade-right">
+            <img src="/assets/mypic2.png" alt="About image" />
+          </div>
+          <div class="content-container" data-aos="fade-left">
+            <h2>About Me</h2>
+            <p>
+              My name is Kavindu Sasmitha, and I'm 21 years old. I am currently studying to become an IT professional at
+              a Software Engineering Institute.My big dream? Becoming a fullstack developer! Right now, I'm geeking out
+              over web and mobile development, while also fueling my passions for coding.
+            </p>
+            <div class="tabs-container">
+
+              <a href="#" class="tab" onclick="openTab('education')">Education & Certification</a>
+            </div>
+
+            <div class="skills-list active-tab" id="skills">
+              <h3>Bachelor's Degree in Software Engineering</h3>
+              <p>Software Engineering Institute</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+  </div>
+
+  <footer>
+    <section class="footer">
+      <div class="footer-content">
+        <h3>Kavindu Sasmitha</h3>
+        <p>
+          Passionate about building modern web & mobile applications. Skilled
+          in React, Node.js, Java and more...
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="www.linkedin.com/in/kavindu-sasmitha-6198b8296"><img class="logo" src="/assets/photos/linkedin.png"
+                alt="LinkedIn" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="logo" src="/assets/photos//github.png" alt="GitHub" /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/share/1PoSwbJGqL/?mibextid=wwXIfr"><img class="logo"
+                src="/assets/photos/facebook.png" alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img class="logo" src="/assets/photos//insta.png" alt="Instagram" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Kavindu Sasmitha. All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector(".nav > ul");
+      const burger = document.querySelector(".burger");
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

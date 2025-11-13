@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVibe - Infinite Emoji & Code Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #1e3a8a, #7c3aed, #d2db27, #f59e0b);
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Enhanced code background with terminal effect */
+        .code-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            white-space: pre;
+            overflow: hidden;
+            animation: codeScroll 25s linear infinite;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        @keyframes codeScroll {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Floating emojis */
+        .emojis {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            animation: emojiFloat 7s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+
+        .emoji:nth-child(1) {
+            left: 10%;
+            top: 15%;
+            animation-delay: 0s;
+        }
+
+        .emoji:nth-child(2) {
+            left: 20%;
+            top: 50%;
+            animation-delay: 0.5s;
+        }
+
+        .emoji:nth-child(3) {
+            right: 15%;
+            top: 25%;
+            animation-delay: 1s;
+        }
+
+        .emoji:nth-child(4) {
+            right: 25%;
+            top: 65%;
+            animation-delay: 1.5s;
+        }
+
+        .emoji:nth-child(5) {
+            left: 35%;
+            bottom: 10%;
+            animation-delay: 2s;
+        }
+
+        .emoji:nth-child(6) {
+            right: 10%;
+            bottom: 20%;
+            animation-delay: 2.5s;
+        }
+
+        .emoji:nth-child(7) {
+            left: 55%;
+            top: 35%;
+            animation-delay: 3s;
+        }
+
+        .emoji:nth-child(8) {
+            left: 65%;
+            bottom: 15%;
+            animation-delay: 3.5s;
+        }
+
+        .emoji:nth-child(9) {
+            left: 45%;
+            top: 20%;
+            animation-delay: 4s;
+        }
+
+        .emoji:nth-child(10) {
+            right: 30%;
+            bottom: 30%;
+            animation-delay: 4.5s;
+        }
+
+        @keyframes emojiFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0.9;
+            }
+
+            33% {
+                transform: translate(-25px, -35px) rotate(120deg);
+                opacity: 1;
+            }
+
+            66% {
+                transform: translate(25px, 35px) rotate(-120deg);
+                opacity: 0.9;
+            }
+        }
+
+        .name-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .name {
+            font-size: clamp(3.5rem, 9vw, 10rem);
+            font-weight: 900;
+            background: linear-gradient(45deg, #22d3ee, #a5b4fc, #f9a8d4, #22d3ee);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation:
+                textGlow 2.5s ease-in-out infinite alternate,
+                textShift 15s linear infinite,
+                shimmer 1.5s linear infinite;
+            text-shadow:
+                0 0 15px rgba(255, 255, 255, 0.9),
+                0 0 30px rgba(34, 211, 238, 0.7),
+                0 0 50px rgba(236, 72, 153, 0.6);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        @keyframes textGlow {
+            from {
+                filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 30px #22d3ee);
+            }
+
+            to {
+                filter: drop-shadow(0 0 25px #fff) drop-shadow(0 0 50px #ec4899);
+            }
+        }
+
+        @keyframes textShift {
+
+            0%,
+            100% {
+                transform: translateX(0) rotateY(0deg);
+            }
+
+            25% {
+                transform: translateX(-8px) rotateY(-4deg);
+            }
+
+            50% {
+                transform: translateX(8px) rotateY(4deg);
+            }
+
+            75% {
+                transform: translateX(-4px) rotateY(-2deg);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 400% 50%;
+            }
+        }
+
+        /* Multiple code clones for infinity effect */
+        .code-clones {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .clone {
+            position: absolute;
+            font-size: clamp(1.5rem, 4vw, 4rem);
+            font-weight: 900;
+            color: rgba(34, 211, 238, 0.2);
+            animation:
+                cloneFloat 12s ease-in-out infinite,
+                fadeClone 3s ease-in-out infinite;
+            font-family: 'Courier New', monospace;
+        }
+
+        .clone:nth-child(1) {
+            top: 15%;
+            left: 8%;
+            animation-delay: 0s;
+        }
+
+        .clone:nth-child(2) {
+            top: 55%;
+            right: 12%;
+            animation-delay: 2s;
+        }
+
+        .clone:nth-child(3) {
+            bottom: 25%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .clone:nth-child(4) {
+            top: 35%;
+            right: 20%;
+            animation-delay: 6s;
+        }
+
+        .clone:nth-child(5) {
+            bottom: 15%;
+            left: 65%;
+            animation-delay: 8s;
+        }
+
+        .clone:nth-child(6) {
+            top: 25%;
+            left: 50%;
+            animation-delay: 10s;
+        }
+
+        @keyframes cloneFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.2;
+            }
+
+            33% {
+                transform: translate(40px, -25px) scale(1.1);
+                opacity: 0.4;
+            }
+
+            66% {
+                transform: translate(-25px, 40px) scale(0.9);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes fadeClone {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Typing effect for subtitle with emojis */
+        .subtitle {
+            margin-top: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.8rem);
+            color: #00ff00;
+            animation: typing 3.5s steps(40, end) infinite, blink-caret 0.7s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #00ff00;
+            padding-right: 8px;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: #00ff00;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                letter-spacing: 0.1em;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .code-bg {
+                font-size: 14px;
+            }
+
+            .emoji {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Enhanced code background with more techy vibe -->
+    <div class="code-bg">
+        // Welcome to CodeVibe Animation
+        const codeVibe = {
+        name: "CodeVibe",
+        emojis: ["🚀", "🌟", "💻", "🔥", "⚡️", "🎉", "🖱️", "💾", "🖥️", "📟"],
+        animations: {
+        gradient: "12s ease infinite",
+        glow: "2.5s ease-in-out infinite",
+        float: "7s ease-in-out infinite"
+        }
+        };
+
+        function initAnimation() {
+        console.log(`Initializing ${codeVibe.name}...`);
+        codeVibe.emojis.forEach(emoji => {
+        console.log(`Spawning ${emoji} at ${Math.random() * 100}%`);
+        });
+        setInterval(() => {
+        console.log("Running infinite animation loop... 🔄");
+        }, 1000);
+        }
+
+        // Terminal-like output
+        > npm install codevibe-animation
+        > Installing dependencies...
+        > Adding emojis: 🚀🌟💻🔥⚡️🎉🖱️💾🖥️📟
+        > Compiling animations...
+        > Done! Running CodeVibe v1.0.0
+        for (let i = 0; i < 15; i++) { console.log(`Generating clone ${i} for ${codeVibe.name}`); } // Matrix-like
+            effect const matrix=Array(20).fill().map(()=> Math.random().toString(36).slice(2));
+            console.log(matrix.join(" "));
+    </div>
+
+    <!-- Floating Emojis (increased count) -->
+    <div class="emojis">
+        <div class="emoji">🚀</div>
+        <div class="emoji">🌟</div>
+        <div class="emoji">💻</div>
+        <div class="emoji">🔥</div>
+        <div class="emoji">⚡️</div>
+        <div class="emoji">🎉</div>
+        <div class="emoji">🖱️</div>
+        <div class="emoji">💾</div>
+        <div class="emoji">🖥️</div>
+        <div class="emoji">📟</div>
+    </div>
+
+    <!-- Floating code clones -->
+    <div class="code-clones">
+        <div class="clone">CodeVibe</div>
+        <div class="clone">CodeVibe</div>
+        <div class="clone">CodeVibe</div>
+        <div class="clone">CodeVibe</div>
+        <div class="clone">CodeVibe</div>
+        <div class="clone">CodeVibe</div>
+    </div>
+
+    <div class="name-container">
+        <h1 class="name">CodeVibe</h1>
+        <div class="subtitle">> Code Forever! 🚀💻🌟</div>
+    </div>
+
+    <script>
+        // Add random floating emojis dynamically
+        function createEmoji() {
+            const emojis = ['🚀', '🌟', '💻', '🔥', '⚡️', '🎉', '🖱️', '💾', '🖥️', '📟', '🔄', '📡'];
+            const emoji = document.createElement('div');
+            emoji.className = 'emoji';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = Math.random() * 100 + '%';
+            emoji.style.top = Math.random() * 100 + '%';
+            emoji.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            emoji.style.animationDelay = Math.random() * 4 + 's';
+            document.querySelector('.emojis').appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000);
+        }
+
+        // Create emojis more frequently
+        setInterval(createEmoji, 1000);
+
+        // Mouse trail effect with more emojis
+        document.addEventListener('mousemove', (e) => {
+            const emojis = ['✨', '⚡️', '🌟', '🔥', '💡'];
+            const trail = document.createElement('div');
+            trail.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            trail.style.cssText = `
+                position: fixed;
+                left: ${e.clientX}px;
+                top: ${e.clientY}px;
+                font-size: 1.2rem;
+                pointer-events: none;
+                z-index: 1000;
+                animation: trailFade 0.7s ease-out forwards;
+            `;
+            document.body.appendChild(trail);
+
+            setTimeout(() => trail.remove(), 700);
+        });
+
+        // Add trail fade animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes trailFade {
+                to {
+                    opacity: 0;
+                    transform: scale(1.8) translateY(-25px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>

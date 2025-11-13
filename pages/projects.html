@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Kavindu Sasmitha</title>
+  <link rel="stylesheet" href="/css/projects.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="header-div">
+    <header class="hed">
+      <div class="header">
+        <div class="logo-container">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><button>Download CV</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="projects-container">
+    <h1>My Projects</h1>
+    <div class="project-grid">
+      <div class="project-card">
+        <h2>WEB Application</h2>
+        <div class="img-card">
+          <img src="/assets/photo_p/av1.png" alt="AV Academy Screenshot 1">
+          <img src="/assets/photo_p/av1.png" alt="AV Academy Screenshot 2">
+          <img src="/assets/photo_p/av1.png" alt="AV Academy Screenshot 3">
+        </div>
+        <p>
+          AV Academy – A modern educational website built with HTML, CSS, and JavaScript. It features a clean UI,
+          responsive design, and interactive course sections showcasing my front-end development skills.
+        </p>
+        <a href="https://github.com/kavindu-sasmitha/AV-Academy" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h2>Driving School</h2>
+        <div class="img-card">
+          <img src="/assets/photo_p/av2.png" alt="Elite Driving School Screenshot 1">
+          <img src="/assets/photo_p/av2.png" alt="Elite Driving School Screenshot 2">
+        </div>
+        <p>
+          Elite Driving School – A reliable standalone desktop application built with Java and JavaFX to help users
+          efficiently manage student records, schedules, payments, and training progress in a secure offline
+          environment.
+        </p>
+        <a href="https://github.com/kavindu-sasmitha/Elite-Driving-School-Orm-Project" target="_blank">View on
+          GitHub</a>
+      </div>
+      <div class="project-card">
+        <h2>Responsive Hotel Website</h2>
+        <div class="img-card">
+          <img src="/assets/photo_p/hotel1.png" alt="Hotel Website Screenshot 1">
+          <img src="/assets/photo_p/hotel2.png" alt="Hotel Website Screenshot 2">
+          <img src="/assets/photo_p/hotel3.png" alt="Hotel Website Screenshot 3">
+          <img src="/assets/photo_p/hotel4.png" alt="Hotel Website Screenshot 4">
+        </div>
+        <p>
+          A responsive, front-end web application developed using HTML, CSS, and JavaScript. This project simulates a
+          hotel booking experience, allowing users to browse rooms, check availability, and submit reservation requests.
+          Emphasizes clean UI/UX design and client-side form validation for a seamless user journey.
+        </p>
+        <a href="https://github.com/kavindu-sasmitha/project-three" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h2>Farm Management System</h2>
+        <div class="img-card">
+          <img src="/assets/photo_p/farm1.png" alt="Screenshot 1">
+          <img src="/assets/photo_p/farm2.png" alt="Screenshot 2">
+          <img src="/assets/photo_p/farm3.png" alt="Screenshot 2">
+          <img src="/assets/photo_p/farm4.png" alt="Screenshot 2">
+        </div>
+        <p>
+          A responsive, front-end web application developed using HTML, CSS, and JavaScript. This project simulates a
+          hotel booking experience, allowing users to browse rooms, check availability, and submit reservation requests.
+          Emphasizes clean UI/UX design and client-side form validation for a seamless user journey.
+        </p>
+        <a href="https://github.com/kavindu-sasmitha/project-three" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector(".nav > ul");
+      const burger = document.querySelector(".burger");
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: aliceblue;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 2rem;
+  max-height: auto;
+}
+
+.projects-container h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #00ff88;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #66ffcc;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.project-card a {
+  color: #00f7ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  color: #33d4ff;
+}
+
+.img-card {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff88 transparent;
+}
+
+.img-card::-webkit-scrollbar {
+  height: 8px;
+}
+
+.img-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.img-card::-webkit-scrollbar-thumb {
+  background: #00ff88;
+  border-radius: 4px;
+}
+
+.img-card img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+/* mobile */
+@media (max-width: 425px) {
+  .projects-container h1 {
+    font-size: 2rem;
+  }
+  .projects-container {
+    padding: 0.5rem;
+  }
+  .project-card {
+    padding: 0.75rem;
+  }
+  .project-card h2 {
+    font-size: 1.1rem;
+  }
+  .project-card p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 375px) {
+  .projects-container h1 {
+    font-size: 1.8rem;
+  }
+  .projects-container {
+    padding: 0.4rem;
+  }
+  .project-card {
+    padding: 0.65rem;
+  }
+  .project-card h2 {
+    font-size: 1rem;
+  }
+  .project-card p {
+    font-size: 0.7rem;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .projects-container h1 {
+    font-size: 2.1rem;
+  }
+  .projects-container {
+    padding: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+}
+/* laptop */
+@media (max-width: 1024px) {
+  .projects-container h1 {
+    font-size: 2.8em;
+  }
+}
+@media (max-width: 1440px) {
+  .projects-container h1 {
+    font-size: 3em;
+  }
+}

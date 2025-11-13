@@ -1,0 +1,123 @@
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+.contact-content h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-content input,
+.contact-content textarea {
+  padding: 0.75rem;
+  background-color: #222;
+  border: 1px solid aliceblue;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contact-content button {
+  width: 400px;
+  padding: 0.75rem;
+  background-color: rgb(7, 192, 17);
+  border: 2px solid rgb(6, 72, 3);
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 1rem auto;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contact-content button:hover {
+  background-color: rgb(5, 150, 13);
+  transform: scale(1.1);
+}
+/* laptop */
+@media (max-width: 1024px) {
+  .contact-content h1 {
+    font-size: 2rem;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 0.9rem;
+  }
+  .contact-content button {
+    width: 300px;
+  }
+}
+@media (max-width: 1440px) {
+  .contact-content h1 {
+    font-size: 2.5rem;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 1rem;
+  }
+  .contact-content button {
+    width: 350px;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .contact-content h1 {
+    font-size: 1.9rem;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 0.9rem;
+  }
+  .contact-content button {
+    width: 250px;
+  }
+}
+/* mobile */
+@media (max-width: 425px) {
+  .contact-content h1 {
+    font-size: 1.7rem;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 0.8rem;
+  }
+  .contact-content button {
+    width: 200px;
+  }
+}
+@media (max-width: 375px) {
+  .contact-content h1 {
+    font-size: 1.5rem;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 0.7rem;
+  }
+  .contact-content button {
+    width: 200px;
+  }
+}
+@media (max-width: 320px) {
+  .contact-content h1 {
+    font-size: 1.6rem;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 0.6rem;
+  }
+  .contact-content button {
+    width: 150px;
+  }
+}

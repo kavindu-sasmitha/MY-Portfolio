@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Kavindu Sasmitha</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/contact.css" />
+</head>
+
+<body>
+  <div class="header-div">
+    <header class="hed">
+      <div class="header">
+        <div class="logo-container">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><button>Download CV</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="main-div">
+    <main>
+      <div class="contact-content">
+        <h1>Contact Me</h1>
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector(".nav > ul");
+      const burger = document.querySelector(".burger");
+      nav.classList.toggle("active");
+      burger.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
